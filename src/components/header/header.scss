@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
+
+  &__logo {
+    flex: 1;
+    img {
+      height: 75px;
+    }
+  }
+
+  &__items {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+
+    .action {
+      color: white;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      font-weight: 500;
+    }
+
+    .action:first-child {
+      border-right: 1px solid rgb(201, 201, 201);
+    }
+  }
+}

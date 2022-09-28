@@ -1,0 +1,35 @@
+@use "../../variables";
+
+.headerItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+  color: white;
+  gap: 0.5rem;
+
+  &:nth-child(n) {
+    border-right: 0.5px solid rgb(201, 201, 201);
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  // @media (min-width: 768px) {
+  //   .headerItem {
+  //     font-size: 12px;
+  //   }
+  // }
+}
