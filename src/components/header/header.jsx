@@ -6,34 +6,7 @@ import HeaderItem from "../HeaderItem";
 
 import { AiOutlineDown } from "react-icons/ai";
 
-const items = [
-  {
-    id: "Item_1",
-    icon: "MdOutlineHouseboat",
-    text: "Pufi Puff",
-    redirect: "puff",
-  },
-  {
-    id: "Item_2",
-    icon: "BsUmbrella",
-    text: "Pufi Rain",
-    redirect: "rain",
-  },
-  {
-    id: "Item_3",
-    icon: "IoShirtOutline",
-    text: "Pufi Cart",
-    redirect: "cart",
-  },
-  {
-    id: "Item_4",
-    icon: "MdOutlineBackpack",
-    text: "Pufi Nap",
-    redirect: "nap",
-  },
-];
-
-const Header = () => {
+const Header = ({ items }) => {
   return (
     <div className="header">
       <a className="header__logo" href="#">
