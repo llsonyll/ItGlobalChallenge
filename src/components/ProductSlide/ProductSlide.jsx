@@ -6,7 +6,7 @@ const ProductSlide = ({ puffi }) => {
   if (!puffi) return null;
 
   return (
-    <section className="productSlide">
+    <section className="productSlide" id={puffi.redirect}>
       <div className="productSlide__side productSlide__side-image">
         <img src={puffi.background} alt="umbrellaPicture" />
         <div className="action">

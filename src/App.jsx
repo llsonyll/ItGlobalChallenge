@@ -1,6 +1,8 @@
 import Footer from "./components/footer";
 import Home from "./components/home";
+import InstagramSlide from "./components/InstagramSlide";
 import ProductSlide from "./components/ProductSlide";
+import SubscribeTile from "./components/SubscribeTile";
 
 const puffies = [
   {
@@ -53,10 +55,11 @@ const App = () => {
   return (
     <>
       <Home />
-
       {puffies.map((puffie) => (
         <ProductSlide puffi={puffie} />
       ))}
+      <InstagramSlide />
+      <SubscribeTile />
       <Footer />
     </>
   );

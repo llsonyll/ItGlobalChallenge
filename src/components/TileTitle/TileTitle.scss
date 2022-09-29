@@ -1,0 +1,20 @@
+.tileTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_subtitle {
+    color: #b1b1b1;
+  }
+
+  &_title {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 14px 0;
+  }
+
+  &_description {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,21 @@
+.instagramSlide {
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  .imageLink {
+    margin-top: 20px;
+  }
+
+  span {
+    color: #b1b1b1;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 14px 0px 72px 0px;
+  }
+}
