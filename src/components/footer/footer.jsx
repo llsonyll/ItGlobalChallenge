@@ -1,5 +1,8 @@
 import "./footer.scss";
 import { GiSwordBrandish } from "react-icons/gi";
+import { MdOutlineSecurity } from "react-icons/md";
+import { BiQrScan } from "react-icons/bi";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const items = [
   {
@@ -31,14 +34,18 @@ const items = [
 const Footer = ({}) => {
   return (
     <div className="footer">
-      <div className="footer__content">
-        <div className="logo"></div>
+      <div className="footer_content">
+        <img
+          className="logo"
+          src="https://simg.nicepng.com/png/small/31-315310_react-hexagon-react-js-transparent-background.png"
+          alt="reactLogo"
+        />
         <div className="cols">
           <ul className="col">
             {items.map((item) => {
               return (
                 <li>
-                  <a href="#"> {item.text} </a>
+                  <a href={`#${item.redirect}`}> {item.text} </a>
                 </li>
               );
             })}
@@ -57,27 +64,32 @@ const Footer = ({}) => {
               <a href="#"> Términos & condiciones </a>
             </li>
           </ul>
-
           <div className="col">
             <span> COMPRA 100% SEGURA </span>
-            <div className="icons">
-              {/* <BiQrScan /> */}
-              {/* <MdOutlineSecurity /> */}
+            <div className="secure">
+              <BiQrScan />
+              <MdOutlineSecurity />
               <span> COMPRÁ CON LA GARANTIA DE PUFI </span>
             </div>
           </div>
-          <div className="col">
+          <div className="col col--social">
             <span> SIGUENOS EN </span>
             <div className="icons">
-              {/* <FaFacebookF /> */}
-              {/* <FaTwitter /> */}
-              {/* <FaInstagram /> */}
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaTwitter />
+              </a>
+              <a href="#">
+                <FaInstagram />
+              </a>
             </div>
           </div>
         </div>
       </div>
       <hr />
-      <div className="">
+      <div className="footer_rights">
         <span> PUFI Copyright 2022 - Todos los derechos reservados </span>
         <GiSwordBrandish />
       </div>

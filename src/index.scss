@@ -3,6 +3,10 @@ $bg-main: #450000;
 
 $mobile: 875px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-stack;
   margin: 0;
