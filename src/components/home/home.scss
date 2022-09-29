@@ -1,8 +1,5 @@
 .home {
   height: 100vh;
-  // background-color: rgba(250, 97, 97, 0.688);
-  // background-image: url("http://songoftheroad.com/wp-content/uploads/2014/12/PeruParacasDay2RedBeachSam.jpg");
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,33 +20,6 @@
 
     .action {
       margin-top: 2rem;
-    }
-  }
-
-  .switch {
-    position: absolute;
-    bottom: 2.5rem;
-    display: flex;
-    gap: 1rem;
-  }
-
-  .background {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    overflow: hidden;
-    z-index: -1;
-
-    .bg-image {
-      min-width: 100%;
-      transition: 0.5s ease-in;
-
-      img {
-        object-fit: cover;
-        opacity: 2;
-        height: 100%;
-        width: 100%;
-      }
     }
   }
 }

@@ -9,6 +9,10 @@ const BgSlider = ({ images = [] }) => {
     transform: `translateX(-${bgImg * 100}%)`,
   };
 
+  const switchButtonSelected = {
+    border: "1px solid black",
+  };
+
   const handleSwitchBg = (id) => {
     if (id === bgImg) return;
     setBgImg(id);
@@ -20,11 +24,10 @@ const BgSlider = ({ images = [] }) => {
         {images.map((_, index) => {
           return (
             <button
+              className={`switch__button ${index === bgImg ? "selected" : ""}`}
               key={`switch-btn-${index}`}
               onClick={() => handleSwitchBg(index)}
-            >
-              {index + 1}
-            </button>
+            ></button>
           );
         })}
       </div>
@@ -33,7 +36,7 @@ const BgSlider = ({ images = [] }) => {
           return (
             <div
               key={`bg-image-${index}`}
-              className="bg-image"
+              className="background__bg-image"
               style={bgStyles}
             >
               <img src={image} alt="bg-1" />
