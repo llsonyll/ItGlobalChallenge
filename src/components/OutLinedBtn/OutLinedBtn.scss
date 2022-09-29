@@ -1,3 +1,24 @@
 .button {
-  border: 1px solid blue;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  transition: 0.5s ease-in;
+
+  &:hover {
+    border: 3px solid white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1.5rem 3rem;
+  }
+
+  &:active {
+    border: 3px solid white;
+  }
 }

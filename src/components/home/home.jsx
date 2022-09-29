@@ -31,7 +31,7 @@ const Home = () => {
         </h1>
 
         <div className="action">
-          <OutlinedButton />
+          <OutlinedButton label="shop" action={() => console.log("Shop")} />
         </div>
       </div>
       <div className="switch">
