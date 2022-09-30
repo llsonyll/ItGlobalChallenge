@@ -37,6 +37,13 @@ const ProductSlide = ({ puffi }) => {
           <IoIosArrowForward />
           <span> Ver más</span>
         </button>
+        <div className="puff_action puff_action-mobile">
+          <OutlinedButton
+            label={isPuffiAlreadyOnCart ? "En el carrito" : "Agregar a carrito"}
+            action={handleAddItemToCart}
+            lightMode={false}
+          />
+        </div>
       </div>
     </section>
   );

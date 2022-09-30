@@ -93,6 +93,10 @@
           &:hover {
             cursor: pointer;
           }
+
+          &-mobile {
+            display: none;
+          }
         }
       }
     }
@@ -128,6 +132,32 @@
         bottom: 50%;
         background-color: white;
         transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .productSlide {
+    &__side {
+      &-image {
+        display: none;
+      }
+
+      &-description {
+        .puff {
+          &_action {
+            &-mobile {
+              display: block;
+            }
+          }
+        }
+
+        &--tag {
+          &::after {
+            display: none;
+          }
+        }
       }
     }
   }

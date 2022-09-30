@@ -53,3 +53,18 @@
     }
   }
 }
+
+@media screen and (max-width: 876px) {
+  .header {
+    padding-inline: 1.25rem;
+    padding-block: 0.5rem;
+
+    &__items {
+      display: none;
+    }
+
+    &__actions {
+      font-size: 0.8rem;
+    }
+  }
+}

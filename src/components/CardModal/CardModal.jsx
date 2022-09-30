@@ -7,6 +7,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 import { TiShoppingCart } from "react-icons/ti";
+import { AiFillCloseSquare } from "react-icons/ai";
 
 const CardModal = () => {
   const modalDisplayed = useSelector((state) => state.cart.showCardModal);
@@ -24,7 +25,7 @@ const CardModal = () => {
           className="closeBtn"
           onClick={() => dispatch(toggleCartModalState(false))}
         >
-          Close
+          <AiFillCloseSquare />
         </button>
 
         <div className="buy_description">
