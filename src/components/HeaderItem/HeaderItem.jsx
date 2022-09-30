@@ -25,7 +25,7 @@ const HeaderItem = ({ item }) => {
   return (
     <a href={`#${item.redirect}`} className="headerItem">
       <div className="headerItem__icon">{renderIcon()}</div>
-      <div className="headerItem__label"> {item.text} </div>
+      <div className="headerItem__label"> {item.name} </div>
     </a>
   );
 };

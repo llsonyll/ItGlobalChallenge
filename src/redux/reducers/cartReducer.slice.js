@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     cart: [],
+    showCardModal: false,
 }
 
 const authReducer = createSlice({
@@ -9,15 +10,16 @@ const authReducer = createSlice({
     initialState,
     reducers: {
         addItemToCart(state, action) {
-            const alreadyOnCart = state.cart.find(i => i === action.payload.id);
-            if (!!alreadyOnCart) return;
             state.cart = [...state.cart, action.payload]
         },
         removeItemFromCart(state, action) {
-            state.cart = state.card.filter(i => i !== action.payload)
+            state.cart = state.cart.filter(i => i.id !== action.payload)
         },
         restartCart(state, action) {
             state.cart = []
+        },
+        toggleCardState(state, action) {
+            state.showCardModal = action.payload;
         }
     },
 })
@@ -25,7 +27,8 @@ const authReducer = createSlice({
 export const {
     addItemToCart,
     removeItemFromCart,
-    restartCart
+    restartCart,
+    toggleCardState
 } = authReducer.actions
 
 export default authReducer.reducer

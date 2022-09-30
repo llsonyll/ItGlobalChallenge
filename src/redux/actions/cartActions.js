@@ -1,4 +1,4 @@
-import { addItemToCart, removeItemFromCart, restartCart } from "../reducers/cartReducer.slice";
+import { addItemToCart, removeItemFromCart, restartCart, toggleCardState } from "../reducers/cartReducer.slice";
 
 export const addItem = (item) => async (dispatch) => {
     dispatch(addItemToCart(item));
@@ -10,4 +10,8 @@ export const removeItem = (id) => async (dispatch) => {
 
 export const resetCart = () => async (dispatch) => {
     dispatch(restartCart())
+}
+
+export const toggleCartModalState = (state) => async (dispatch) => {
+    dispatch(toggleCardState(state))
 }

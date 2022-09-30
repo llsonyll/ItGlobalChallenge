@@ -4,12 +4,19 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import { addItem } from "../../redux/actions/cartActions";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductSlide = ({ puffi }) => {
   if (!puffi) return null;
-
+  const isPuffiAlreadyOnCart = useSelector(
+    (state) => !!state.cart.cart.find((i) => i.id === puffi.id)
+  );
   const dispatch = useDispatch();
+
+  const handleAddItemToCart = () => {
+    if (isPuffiAlreadyOnCart) return;
+    dispatch(addItem(puffi));
+  };
 
   return (
     <section className="productSlide" id={puffi.redirect}>
@@ -17,8 +24,8 @@ const ProductSlide = ({ puffi }) => {
         <img src={puffi.background} alt="umbrellaPicture" />
         <div className="action">
           <OutlinedButton
-            label="SHOP"
-            action={() => dispatch(addItem(puffi))}
+            label={isPuffiAlreadyOnCart ? "En el carrito" : "Agregar a carrito"}
+            action={handleAddItemToCart}
           />
         </div>
       </div>

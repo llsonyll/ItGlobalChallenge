@@ -1,0 +1,73 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  background-color: white;
+  transition: 0.5s ease-in;
+  z-index: 100;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
+
+  &_content {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .closeBtn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .buy {
+      &_description {
+        flex: 9;
+
+        display: flex;
+        flex-direction: column;
+
+        .items {
+          flex: 1;
+          max-height: 750px;
+          overflow-y: auto;
+        }
+
+        .no-items {
+          opacity: 0.75;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          justify-content: center;
+          align-items: center;
+
+          .icon {
+            font-size: 64px;
+          }
+        }
+      }
+
+      &_action {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end;
+        align-items: center;
+        padding-top: 20px;
+
+        button {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        span {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
