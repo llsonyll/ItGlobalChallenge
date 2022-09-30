@@ -2,15 +2,24 @@ import "./ProductSlide.scss";
 import OutlinedButton from "./../OutLinedBtn";
 import { IoIosArrowForward } from "react-icons/io";
 
+import { addItem } from "../../redux/actions/cartActions";
+
+import { useDispatch } from "react-redux";
+
 const ProductSlide = ({ puffi }) => {
   if (!puffi) return null;
+
+  const dispatch = useDispatch();
 
   return (
     <section className="productSlide" id={puffi.redirect}>
       <div className="productSlide__side productSlide__side-image">
         <img src={puffi.background} alt="umbrellaPicture" />
         <div className="action">
-          <OutlinedButton label="SHOP" />
+          <OutlinedButton
+            label="SHOP"
+            action={() => dispatch(addItem(puffi))}
+          />
         </div>
       </div>
       <div className="productSlide__side productSlide__side-description productSlide__side-description--tag">

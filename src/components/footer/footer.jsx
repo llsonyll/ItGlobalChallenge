@@ -44,7 +44,7 @@ const Footer = ({}) => {
           <ul className="col">
             {items.map((item) => {
               return (
-                <li>
+                <li key={item.id}>
                   <a href={`#${item.redirect}`}> {item.text} </a>
                 </li>
               );

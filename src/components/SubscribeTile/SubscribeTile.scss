@@ -4,16 +4,17 @@
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
+  margin-bottom: 3rem;
 
   .textInput {
-    margin: 3rem 0;
+    margin: 3rem 0 1rem 0;
     min-width: 30vw;
     position: relative;
     display: flex;
     align-items: center;
     border: 1px solid #545454;
     gap: 0.25rem;
-    padding: 1rem;
+    padding: 0.8rem 1.2rem;
     color: #b1b1b1;
 
     .input {
@@ -25,5 +26,9 @@
     .inputIcon {
       font-size: 21px;
     }
+  }
+
+  .submitBtn {
+    width: 100%;
   }
 }
