@@ -3,35 +3,10 @@ import { GiSwordBrandish } from "react-icons/gi";
 import { MdOutlineSecurity } from "react-icons/md";
 import { BiQrScan } from "react-icons/bi";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-
-const items = [
-  {
-    id: "Item_1",
-    icon: "MdOutlineHouseboat",
-    text: "Pufi Puff",
-    redirect: "puff",
-  },
-  {
-    id: "Item_2",
-    icon: "BsUmbrella",
-    text: "Pufi Rain",
-    redirect: "rain",
-  },
-  {
-    id: "Item_3",
-    icon: "IoShirtOutline",
-    text: "Pufi Cart",
-    redirect: "cart",
-  },
-  {
-    id: "Item_4",
-    icon: "MdOutlineBackpack",
-    text: "Pufi Nap",
-    redirect: "nap",
-  },
-];
+import { useSelector } from "react-redux";
 
 const Footer = ({}) => {
+  const items = useSelector((state) => state.items.items);
   return (
     <div className="footer">
       <div className="footer_content">
@@ -45,23 +20,37 @@ const Footer = ({}) => {
             {items.map((item) => {
               return (
                 <li key={item.id}>
-                  <a href={`#${item.redirect}`}> {item.text} </a>
+                  <a href={`#${item.redirect}`}> {item.name} </a>
                 </li>
               );
             })}
           </ul>
           <ul className="col">
             <li>
-              <a href="#"> Contacto </a>
+              <a
+                href="https://www.linkedin.com/in/josep-jairo-rojas-baca-34975a1bb/"
+                target="_blank"
+              >
+                Contacto
+              </a>
             </li>
             <li>
-              <a href="#"> Ayuda </a>
+              <a href="https://github.com/llsonyll" target="_blank">
+                Ayuda
+              </a>
             </li>
             <li>
-              <a href="#"> Cómo comprar </a>
+              <a href="https://twitter.com/StrkJoseph" target="_blank">
+                Cómo comprar{" "}
+              </a>
             </li>
             <li>
-              <a href="#"> Términos & condiciones </a>
+              <a
+                href="https://www.linkedin.com/company/itglobal/"
+                target="_blank"
+              >
+                Términos & condiciones
+              </a>
             </li>
           </ul>
           <div className="col">
@@ -75,13 +64,16 @@ const Footer = ({}) => {
           <div className="col col--social">
             <span> SIGUENOS EN </span>
             <div className="icons">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/JosepRojasNice/"
+                target="_blank"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/StrkJoseph" target="_blank">
                 <FaTwitter />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/joshscp/" target="_blank">
                 <FaInstagram />
               </a>
             </div>

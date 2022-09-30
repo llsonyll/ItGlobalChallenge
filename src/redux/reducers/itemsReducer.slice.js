@@ -18,7 +18,7 @@ const initialState = {
         imgUrl:
             "https://www.pngplay.com/wp-content/uploads/4/Umbrella-PNG-Photo-Image.png",
         background:
-            "https://artist.com/photos/arts/extra-big/rain-in-colorful-umbrellas-1800376912.jpg",
+            "https://i.pinimg.com/736x/95/a8/9e/95a89e40e4e2e7ccb9d4c0cd30090ea6--bean-bags-puffs.jpg",
         icon: "MdOutlineHouseboat",
         redirect: "puff",
         description: "Descripcion del producto. Este es un texto simulado.",
@@ -29,7 +29,7 @@ const initialState = {
         imgUrl:
             "https://www.pngplay.com/wp-content/uploads/4/Umbrella-PNG-Photo-Image.png",
         background:
-            "https://artist.com/photos/arts/extra-big/rain-in-colorful-umbrellas-1800376912.jpg",
+            "https://previews.123rf.com/images/stylephotographs/stylephotographs1407/stylephotographs140700007/29682605-businessman-with-shopping-bag-buying-fresh-vegetables-in-a-supermarket.jpg",
         icon: "IoShirtOutline",
         redirect: "cart",
         description: "Descripcion del producto. Este es un texto simulado.",
@@ -40,7 +40,7 @@ const initialState = {
         imgUrl:
             "https://www.pngplay.com/wp-content/uploads/4/Umbrella-PNG-Photo-Image.png",
         background:
-            "https://artist.com/photos/arts/extra-big/rain-in-colorful-umbrellas-1800376912.jpg",
+            "https://www.luxuryfurnituremr.com/images/tb/8/6/5/8651/1269387760_w904h3000.jpg",
         icon: "MdOutlineBackpack",
         redirect: "nap",
         description: "Descripcion del producto. Este es un texto simulado.",
